@@ -33,7 +33,7 @@ const NavBar = () => {
         <div className={`${activeItem ? 'hidden md:block': ''} `}>
             <img src={Logo} alt='divine-logo' className={`h-8 md:h-12 w-20 md:w-44`}/>
         </div>
-        <div className={`pt-1 relative md:w-1/2 px-2  ${activeItem ? 'hidden md:block': ''}`}>
+        <div className={`pt-1 relative md:w-1/2 px-4  ${activeItem ? 'hidden md:block': ''}`}>
            <form onSubmit={handleSearchQuery}>
            <input
             className={`border border-gray-400 rounded-sm p-2 w-32 md:w-full` }
@@ -43,7 +43,7 @@ const NavBar = () => {
             placeholder='Search Astrologers...'
             />
            </form>
-           <CgSearch className='absolute right-0 md:left-80 left-28 md:right-0 top-4 text-red-500' />
+           <CgSearch className='absolute right-0 md:inset-x-3/4 left-28 md:right-20 top-4 text-red-500' />
         </div>
         <div className='hidden md:block w-1/2'>
             <ul className='flex gap-2'>
