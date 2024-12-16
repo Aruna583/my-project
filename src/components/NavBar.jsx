@@ -17,7 +17,6 @@ const NavBar = () => {
     
     
     const handleSearchQuery = (e) => {
-        console.log(e.target.value)
         e.preventDefault();
         if(searchTerm.trim()){
         dispatch(setSearchQuery(searchTerm))
@@ -27,22 +26,22 @@ const NavBar = () => {
 
   return (
     <>
-    <nav className='bg-white w-full h-16 md:h-40 md:drop-shadow-xl drop-shadow-md flex justify-center items-center px-2'>
+    <nav className='bg-white w-full h-36 md:h-40 md:drop-shadow-xl drop-shadow-md flex justify-center items-center px-2'>
        <div className='container flex justify-between'>
         <div>
             <img src={Logo} alt='divine-logo' className='h-8 md:h-12 w-20 md:w-44'/>
         </div>
-        <div className='pt-1 lg:w-32 hidden lg:block relative'>
+        <div className='pt-1 relative'>
            <form onSubmit={handleSearchQuery}>
            <input
-            className='border border-gray-400 rounded-sm p-2' 
+            className='border border-gray-400 rounded-sm p-2 w-32 md:w-full' 
             type='text'
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             placeholder='Search Astrologers...'
             />
            </form>
-           <CgSearch className='absolute right-0 inset-44 top-4 text-red-500' />
+           <CgSearch className='absolute right-1 md:right-0 md:inset-x-44 top-4 text-red-500' />
         </div>
         <div className='hidden md:block'>
             <ul className='flex items-center gap-4'>
@@ -50,7 +49,7 @@ const NavBar = () => {
                 return (
                 <li 
                 key={item.id}
-                className={`inline-block py-2 px-3 text-lg cursor-pointer blue-gray-900 ${activeLink === item.link ? 'font-bold' : ''}`}
+                className={`inline-block py-2 px-3 text-lg cursor-pointer blue-gray-900 hover:bg-red-500 hover:text-white hover:rounded-md ${activeLink === item.link ? 'font-bold' : ''}`}
                 onClick={() => {
                     setActiveLink(item.link)
                     navigate(item.link)
