@@ -19,8 +19,8 @@ const Astrologers = () => {
 
 
   return (
-    <div className='px-2 md:mx-28'>
-        <h1 className='text-center font-normal text-sm md:text-5xl blue-gray-900 md:block py-10 font-sans'>Chat with Astrologers</h1>
+    <div className='px-2 md:mx-28 overflow-y-auto py-20 md:py-40 bg-white'>
+        <h1 className='text-center font-normal text-sm md:text-5xl blue-gray-900 hidden md:block py-10 font-sans'>Chat with Astrologers</h1>
         <div className='py-6 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-2 md:gap-2 lg:gap-4 px-2 md:px-0'>
             {astrologerData?.map((astrologer) => (
                 <AstrologerCard key={astrologer.id} astrologer={astrologer}/>

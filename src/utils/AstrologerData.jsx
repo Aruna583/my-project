@@ -79,4 +79,16 @@ export const astrologersData = [
         rating: 4.5,
         online:true
     },
+    {
+        id: 7,
+        name: 'Aarohi',
+        imageUrl: img4,
+        speciality: 'Vedic, Numerology',
+        languages: 'English, Hindi',
+        experience: '10 years',
+        amount: '₹25/Min',
+        isFree: false,
+        rating: 4.5,
+        online:false
+    },
 ]
