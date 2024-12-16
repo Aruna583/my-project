@@ -49,7 +49,7 @@ const NavBar = () => {
                 return (
                 <li 
                 key={item.id}
-                className={`inline-block py-2 px-3 text-lg cursor-pointer blue-gray-900 hover:bg-red-500 hover:text-white hover:rounded-md ${activeLink === item.link ? 'font-bold' : ''}`}
+                className={`inline-block py-2 px-3 text-lg cursor-pointer blue-gray-900 hover:bg-rose-500 hover:text-white hover:rounded-md ${activeLink === item.link ? 'font-bold' : ''}`}
                 onClick={() => {
                     setActiveLink(item.link)
                     navigate(item.link)
@@ -58,7 +58,10 @@ const NavBar = () => {
                     {item.title}
                 </li>)
             })}
-            <button className='text-white rounded-md bg-rose-500 w-32 h-10'>
+            <button 
+            className='text-white rounded-md bg-rose-500 w-32 h-10'
+            onClick={() => alert('Get App Clicked')}
+            >
                 GetApp
             </button>
             </ul>

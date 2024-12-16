@@ -35,7 +35,7 @@ const AstrologerCard = ({astrologer}) => {
             <p className='text-xs md:text-base py-1 text-gray-500'>{astrologer.languages}</p>
             <p className='text-xs md:text-base py-1 text-gray-500'>Exp: {astrologer.experience}</p>
             <p className=''>
-                <span className={`${astrologer.isFree || astrologer.offerAmt ? 'line-through decoration-red-500 text-gray-400' : 'text-gray-400'}`}>
+                <span className={`text-base md:text-2xl ${astrologer.isFree || astrologer.offerAmt ? 'line-through decoration-red-500 text-gray-400' : 'text-gray-400'}`}>
                     {astrologer.amount}
                 </span> 
                 {astrologer?.isFree && <span className='text-red-500 pl-2 font-semibold text-base md:text-2xl'>FREE</span>}
