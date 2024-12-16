@@ -8,6 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setSearchQuery } from '../utils/searchSlice';
 import { CgSearch } from 'react-icons/cg';
+import NavItem from './NavItem';
 
 const NavBar = () => {
     const [open, setOpen] = useState(false);
@@ -50,17 +51,26 @@ const NavBar = () => {
             <ul className='flex gap-2'>
             {NavBarData.map((item) => {
                 return (
-                <li 
+                // <li 
+                // key={item.id}
+                // className={`inline-block py-2 px-3 text-lg cursor-pointer text-slate-900 hover:bg-rose-500 hover:text-white hover:rounded-md ${activeLink === item.link ? 'font-bold' : ''}`}
+                // onClick={() => {
+                //     setActiveLink(item.link)
+                //     setActiveItem(item)
+                //     navigate(item.link)
+                // }}
+                // >
+                //     {item.title}
+                // </li>
+                <NavItem 
+                item={item}
                 key={item.id}
-                className={`inline-block py-2 px-3 text-lg cursor-pointer text-slate-900 hover:bg-rose-500 hover:text-white hover:rounded-md ${activeLink === item.link ? 'font-bold' : ''}`}
-                onClick={() => {
-                    setActiveLink(item.link)
-                    setActiveItem(item)
-                    navigate(item.link)
-                }}
-                >
-                    {item.title}
-                </li>)
+                activeLink={activeLink}
+                setActiveLink={setActiveLink}
+                setActiveItem={setActiveItem}
+                // setOpen={setOpen}
+                />
+                )
             })}
             <button 
             className='text-white rounded-md bg-rose-500 w-32 h-10'
