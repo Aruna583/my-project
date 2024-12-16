@@ -45,12 +45,6 @@ const AstrologerCard = ({astrologer}) => {
 
         <div className='flex flex-col justify-between items-end '>
             <PiSealCheckFill className='h-5 w-5 md:h-6 md:w-6 text-emerald-500'/>
-            {/* <button className={`px-4 py-2 font-semibold rounded-md ${
-                astrologer.online ? 
-                'border-2 border-green-400 bg-white text-green-500 hover:bg-green-400 hover:text-white' :
-                 'border-2 border-red-400 text-red-500 bg-white hover:bg-red-400 hover:text-white'}`}>
-                Chat
-            </button> */}
             <div>
             <ButtonElement 
             children="Chat"
