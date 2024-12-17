@@ -62,11 +62,13 @@ Currently, two official plugins are available:
 # How to install and run the project
 
  -clone the project from github with the provided link
+ 
+ -In the local terminal run the below command to clone the project
 
- -git clone (provided link)
+ -git clone git@github.com:Aruna583/my-project.git
 
  -run the command npm install
 
- -run the comman npm run dev
- 
- -we will the link to view the website locally with the name  ["http://localhost:"]
+ -run the command npm run dev
+
+ -we will get the link to view the website locally with the name  ["http://localhost:"]
